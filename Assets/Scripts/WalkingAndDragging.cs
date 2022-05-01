@@ -7,7 +7,7 @@ public class WalkingAndDragging : MonoBehaviour
     private int stopcube = 0;
     public Animator animator;
     Touch parmak;
-
+    public GameObject[] AiPlayers;
 
     public GameObject Brush;
     public float BrushSize = 1f;
@@ -76,6 +76,10 @@ public class WalkingAndDragging : MonoBehaviour
             stopcube = 1;
             Debug.Log("Cube Girdi");
            
+        }
+        for (int i = 0; i <= AiPlayers.Length; i++)
+        {
+            Destroy(AiPlayers[i]);
         }
     }
 }
