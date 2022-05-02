@@ -19,6 +19,6 @@ public class StartGame : MonoBehaviour
 
     public void StartNextScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene");
     }
 }

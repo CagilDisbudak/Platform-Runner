@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class RotatingPlatformRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
     public int RotationRatio;
 
     void Update()
