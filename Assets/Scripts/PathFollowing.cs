@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PathFollowing : MonoBehaviour
 {
     public Transform[] target;
-    private float speed = 2.62f;
+    private float speed = 6f; //As I mention in ReadMe File, normally speed should be 2.62f , but in unity engine it will be bugged.The AIs not going forward, they are going back.
     private int current;
     private float min;
     private float min1;
