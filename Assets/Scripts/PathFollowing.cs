@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PathFollowing : MonoBehaviour
 {
     public Transform[] target;
-    private float speed = 2.5f;
+    private float speed = 2.62f;
     private int current;
     private float min;
     private float min1;
