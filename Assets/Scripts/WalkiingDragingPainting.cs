@@ -32,14 +32,14 @@ public class WalkiingDragingPainting : MonoBehaviour
                 }
             }
             transform.Translate(0, 0, hiz * Time.deltaTime);
-            
+
         }
 
         else if (stopcube == 1) // When we come to the finish line, we stop our movement and paint the wall.
         {
             transform.Translate(0, 0, 0);
             animator.SetTrigger("Duvar");
-             Painting();
+            Painting();
         }
         if (transform.position.y < 0) //If the character moves down the y-axis, the game restarts.
         {
@@ -87,15 +87,20 @@ public class WalkiingDragingPainting : MonoBehaviour
     [System.Obsolete]
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.other.name == "Cube")
+        if (collision.other.tag == "Obstacle")  //If user hit any obstacle game start again.
         {
-            stopcube = 1;
-            for (int i = 0; i <= AiPlayers.Length; i++)
+            SceneManager.LoadScene(1);
+        }
+         if (collision.other.name == "Cube")    // if user hit the invisible cube, the all AIs will be destroyed and the user will start painting.
             {
-                Destroy(AiPlayers[i]);
+                stopcube = 1;
+                for (int i = 0; i <= AiPlayers.Length; i++)
+                {
+                    Destroy(AiPlayers[i]);
+                }
+
             }
 
-        }
-
+        
     }
 }

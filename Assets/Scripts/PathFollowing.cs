@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PathFollowing : MonoBehaviour
 {
@@ -67,4 +68,14 @@ public class PathFollowing : MonoBehaviour
             current = (current + 1);
         }
     }
-}
+
+    [System.Obsolete]
+    private void OnCollisionEnter(Collision collision)   //if ai hit the obstacle it will start from begining.
+    {
+        if (collision.other.tag == "Obstacle")
+        {
+            transform.position = FirstPos;
+            current = 0;
+        }
+    }
+ }

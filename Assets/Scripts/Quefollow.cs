@@ -6,24 +6,28 @@ using UnityEngine.UI;
 public class Quefollow : MonoBehaviour
 {
     public GameObject[] Players;
-    private float zCoord;
     public Text text;
+    private int say = 1;
     void Start()
     {
-        zCoord = Players[0].transform.position.z;
-
     }
 
    
-    void Update()                              //By looking at the z-coordinate of all the characters, it is found out who is ahead.
+    void Update()                              //By looking at the z-coordinate of all the characters, it is found boy's location.
     {
-        for (int i = 0; i <= Players.Length ; i++) 
+       
+        say = 1;
+        for (int i = 1; i <= Players.Length; i++)
         {
-            if (Players[i].transform.position.z > zCoord)
-            { 
-                zCoord = Players[i].transform.position.z;
-                text.text = "1. " + Players[i].name;
+          
+            if (Players[i].transform.position.z > Players[0].transform.position.z)
+            {
+                say++;
             }
+            text.text = say + ". " + Players[0].name;
         }
+    
     }
+
 }
+
