@@ -17,7 +17,7 @@ public class StartGame : MonoBehaviour
         
     }
 
-    public void StartNextScene()
+    public void StartNextScene()                // it leads to the game.
     {
         SceneManager.LoadScene("SampleScene");
     }

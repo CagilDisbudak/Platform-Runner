@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class AIDestroyObstacle : MonoBehaviour
 {
-    // Start is called before the first frame update
+ 
     void Start()
-    {
-        
-    }
+    {}
 
-    // Update is called once per frame
     void Update()
-    {
-        
-    }
+    {}
+
+
+    // When AI hith the obstacle they will destroyed.
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "AI")

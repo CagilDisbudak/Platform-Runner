@@ -14,8 +14,8 @@ public class Quefollow : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+   
+    void Update()                              //By looking at the z-coordinate of all the characters, it is found out who is ahead.
     {
         for (int i = 0; i <= Players.Length ; i++) 
         {

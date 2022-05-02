@@ -10,7 +10,7 @@ public class RotatingPlatformRotation : MonoBehaviour
     }
     public int RotationRatio;
 
-    void Update()
+    void Update()  //The rotation of the moving platforms is provided here.
     {
         transform.Rotate(Vector3.forward * RotationRatio * Time.deltaTime, Space.Self);
 

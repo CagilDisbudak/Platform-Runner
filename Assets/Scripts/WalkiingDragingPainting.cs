@@ -23,7 +23,7 @@ public class WalkiingDragingPainting : MonoBehaviour
     {
         if (stopcube == 0)
         {
-            if (Input.touchCount > 0)
+            if (Input.touchCount > 0)     //Here, the character moves to the right or left with the movement of the user's finger.
             {
                 parmak = Input.GetTouch(0);
                 if (parmak.phase == TouchPhase.Moved)
@@ -32,16 +32,16 @@ public class WalkiingDragingPainting : MonoBehaviour
                 }
             }
             transform.Translate(0, 0, hiz * Time.deltaTime);
-            Debug.Log("Yuruyor");
+            
         }
-        else if (stopcube == 1)
+
+        else if (stopcube == 1) // When we come to the finish line, we stop our movement and paint the wall.
         {
             transform.Translate(0, 0, 0);
             animator.SetTrigger("Duvar");
-            Debug.Log("Durdu");
              Painting();
         }
-        if (transform.position.y < 0)
+        if (transform.position.y < 0) //If the character moves down the y-axis, the game restarts.
         {
             SceneManager.LoadScene("StartScene");
         }
@@ -53,7 +53,7 @@ public class WalkiingDragingPainting : MonoBehaviour
 
         parmak = Input.GetTouch(0);
 
-        if (parmak.phase == TouchPhase.Moved)
+        if (parmak.phase == TouchPhase.Moved)                                    // Painting is compliting here. Coloring specifically could not be achieved because rend.sharedMaterial.mainTexture is constantly returning null.
         {
 
             RaycastHit hit;
@@ -90,7 +90,6 @@ public class WalkiingDragingPainting : MonoBehaviour
         if (collision.other.name == "Cube")
         {
             stopcube = 1;
-            Debug.Log("Cube Girdi");
             for (int i = 0; i <= AiPlayers.Length; i++)
             {
                 Destroy(AiPlayers[i]);

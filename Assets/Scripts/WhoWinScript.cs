@@ -14,13 +14,17 @@ public class WhoWinScript : MonoBehaviour
     {
         first = 0;
     }
-
-    // Update is called once per frame
     void Update()
-    {
-        
+    { 
     }
+
+
     [System.Obsolete]
+
+
+
+    //Plays the Animation showing whether the user or the Ai won.
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.other.tag == "AI")

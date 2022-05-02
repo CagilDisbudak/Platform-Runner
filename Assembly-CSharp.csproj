@@ -58,8 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\WalkiingDragingPainting.cs" />
-    <Compile Include="Assets\Scripts\Paintable.cs" />
-    <Compile Include="Assets\Scripts\WalkingAndDragging.cs" />
     <Compile Include="Assets\Scripts\Quefollow.cs" />
     <Compile Include="Assets\Scripts\WhoWinScript.cs" />
     <Compile Include="Assets\Scripts\BackToMainMenu.cs" />

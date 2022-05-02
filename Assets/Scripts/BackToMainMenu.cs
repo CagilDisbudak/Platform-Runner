@@ -5,22 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class BackToMainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update\
     public Renderer Rend;
     void Start()
-    {
-        
+    {      
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
+
+
+    //The scripts for buttons to back to main menu.
+
     public void MainMenu() 
     {
         Rend.sharedMaterial.color = Color.white;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 }
